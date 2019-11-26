@@ -27,7 +27,7 @@ function imprimirTextos(response, textos) {
                 "Textos Anárquicos" +
             "</title>" +
             "<body>" +
-            "<button onclick=\"location.href = 'http://localhost:5000/';\">Novo Texto</button>" +
+            "<button onclick=\"location.href = 'https://exemplo-mvc.herokuapp.com/';\">Novo Texto</button>" +
                 "<style>" +
                     ".myClass {" +
                     "color: white;" +
