@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <meta charset="UTF-8">
+    </head>
+    <title>
+        Textos Anárquicos
+    </title>
+    <body>
+
+        <h2>Textos Anárquicos</h2>
+
+        <form action="http://localhost:5000/textos" method="POST" id="textoform">
+            Título:<br>
+            <input type="text" name="titulo" value="Título">
+            <br>
+            Texto:<br>
+            <textarea name="texto" form="textoform">Digite seu texto aqui.</textarea>
+            <br><br>
+            <input type="submit" value="Enviar">
+        </form> 
+        <button onclick="location.href = 'http://localhost:5000/textos';">Ver Textos</button>
+
+    </body>
+</html>
