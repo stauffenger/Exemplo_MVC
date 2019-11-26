@@ -5,7 +5,7 @@ async function getTextos() {
     let retorno
     await clientBancoDeDados.connect()
     .then(() => console.log("Conexão bem sucedida com o banco de dados!"))
-    .then(() => clientBancoDeDados.query("SELECT titulo, descricao, usuario as autor, edicao FROM projetos, usuarios WHERE id_autor = id_usuario ORDER BY data_criacao DESC"))
+    .then(() => clientBancoDeDados.query("SELECT titulo, texto FROM textos"))
     .then(resultados => retorno = resultados.rows)
     .catch(erro => console.error("Erro ao tentar conectar com o banco de dados.", erro))
     .finally(() => clientBancoDeDados.end())
