@@ -6,14 +6,17 @@ function imprimirTextos(response, textos) {
     for (var i = 0; i < textos.length; i++){
         let texto = textos[i];
         for (var key in texto){
-            conteudo += (
-                "<div class=\"myClass\">" +
-                    key + "<br>" +
+            if (key == "titulo") {
+                conteudo += (
+                    "<div class=\"myClass\">" +
+                        texto[key] + "<br>")    
+            } else {
+                conteudo += (
                     "<div style=\"text-align: justify\">" +
                         "<p>" + texto[key] + "</p>" +
                     "</div>" +
                 "</div>"
-            )
+            )}
         }
     }
 
