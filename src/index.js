@@ -14,7 +14,7 @@ var corOptions = {
 }
 
 app.use(cors(corOptions)) // Habilitando acesso de outra origem Cross-Origin Resource Sharing
-app.use(express.json()) // Transforma o JSON do body em um objeto JavaScript
+app.use(express.urlencoded()) // Transforma o form em um objeto JavaScript
 
 app.get('/', indexRoutes)
 app.use('/textos', textosRoutes)

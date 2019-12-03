@@ -18,7 +18,7 @@ async function postTextos(titulo, texto) {
     await clientBancoDeDados.connect()
     .then(() => console.log("Conexão bem sucedida com o banco de dados!"))
     .then(async () => {
-        await clientBancoDeDados.query("INSERT INTO textos(titulo, texto) VALUES('$1', '$2')", [titulo, texto])
+        await clientBancoDeDados.query("INSERT INTO textos(titulo, texto) VALUES($1, $2)", [titulo, texto])
         .then(() => retorno = [{ "Sucesso" : "Texto Inserido." }])
         .catch(erro => {
             console.error("Erro ao tentar inserir texto no banco de dados.", erro)
